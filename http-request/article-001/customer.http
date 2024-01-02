@@ -1,0 +1,15 @@
+## create customer
+POST http://localhost:8080/customer
+
+{
+"firstName": "John",
+"lastName": "Doe",
+"userName": "johndoe",
+"email": "johndoe",
+"address":{
+"street": "123 Main St",
+"city": "New York",
+"state": "NY",
+"zipCode": "10001"
+}
+}
