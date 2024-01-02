@@ -14,7 +14,9 @@ class CustomerServiceImpl(
     private val customerRepository: CustomerRepository,
     private val logger: Logger,
 ): CustomerService {
-    override fun saveCustomer(customerDto: CustomerDto): Customer {
-       return customerRepository.saveCustomer(customerDto)
+    override fun saveCustomer(customerDto: CustomerDto): CustomerDto {
+       return customerRepository.saveCustomer(customerDto).toDto().also {
+           logger.info("Customer $it")
+           }
     }
 }

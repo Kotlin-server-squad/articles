@@ -1,15 +1,17 @@
 ## create customer
 POST http://localhost:8080/customer
+Content-Type: application/json
+Accept: application/json
 
 {
-"firstName": "John",
-"lastName": "Doe",
-"userName": "johndoe",
-"email": "johndoe",
-"address":{
-"street": "123 Main St",
-"city": "New York",
-"state": "NY",
-"zipCode": "10001"
-}
+  "firstName": "John",
+  "lastName": "Doe",
+  "userName": "johndoe",
+  "email": "johndoe",
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": "10001"
+  }
 }

@@ -8,11 +8,11 @@ import com.kss.articles.dto.CustomerDto
 fun CustomerDto.toEntity(): Customer {
     return Customer(
         id = 0,
-        firstName = "",
-        lastName = "",
-        userName = "",
-        email = "",
-        address = Address(id = 0, street = "", city = "", state = "", zipCode = 0)
+        firstName = this.firstName,
+        lastName = this.lastName,
+        userName = this.userName,
+        email = this.email,
+        address = this.address.toEntity()
 
     )
 }

@@ -5,5 +5,5 @@ import com.kss.articles.dto.CustomerDto
 import org.springframework.stereotype.Service
 
 interface CustomerService {
-    fun saveCustomer(customerDto: CustomerDto): Customer
+    fun saveCustomer(customerDto: CustomerDto): CustomerDto
 }
