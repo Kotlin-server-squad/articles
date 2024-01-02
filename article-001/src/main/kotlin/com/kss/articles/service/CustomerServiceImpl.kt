@@ -16,6 +16,5 @@ class CustomerServiceImpl(
 ): CustomerService {
     override fun saveCustomer(customerDto: CustomerDto): Customer {
        return customerRepository.saveCustomer(customerDto)
-           .toDto()
     }
 }
