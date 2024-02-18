@@ -9,5 +9,6 @@ data class CustomerDto(
     val firstName: String,
     val lastName: String,
     val email: String,
-    val address: AddressDto
+    val address: AddressDto,
+    val age: Int
 )

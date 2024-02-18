@@ -6,5 +6,6 @@ data class Customer(
     val lastName: String,
     val userName: String,
     val email: String,
+    val age: Int,
     val address: Address,
 )

@@ -4,6 +4,7 @@ import com.kss.articles.domain.Address
 import com.kss.articles.domain.Customer
 import com.kss.articles.dto.AddressDto
 import com.kss.articles.dto.CustomerDto
+import com.kss.articles.extension.reverseAndUppercase
 
 fun CustomerDto.toEntity(): Customer {
     return Customer(
@@ -12,8 +13,8 @@ fun CustomerDto.toEntity(): Customer {
         lastName = this.lastName,
         userName = this.userName,
         email = this.email,
-        address = this.address.toEntity()
-
+        address = this.address.toEntity(),
+        age = this.age
     )
 }
 
@@ -24,7 +25,8 @@ fun Customer.toDto(): CustomerDto {
         lastName = this.lastName,
         userName = this.userName.reverseAndUppercase(),
         email = this.email,
-        address = this.address.toDto()
+        address = this.address.toDto(),
+        age = this.age
     )
 }
 
