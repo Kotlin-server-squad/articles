@@ -12,11 +12,11 @@ import org.springframework.stereotype.Service
 class CustomerServiceImpl(
     private val customerRepository: CustomerRepository,
     private val logger: Logger,
-): CustomerService {
+) : CustomerService {
     override fun saveCustomer(customerDto: CustomerDto): CustomerDto {
-       return customerRepository.saveCustomer(customerDto).toDto().also {
-           logger.info("Customer $it")
-           }
+        return customerRepository.saveCustomer(customerDto).toDto().also {
+            logger.info("Customer $it")
+        }
     }
 
     override fun getAllValidCustomers(): List<Customer> {

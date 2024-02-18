@@ -1,7 +1,5 @@
 package com.kss.articles.extension
 
-import com.kss.articles.domain.Customer
-
 fun String.reverseAndUppercase(): String {
     return this.reversed().uppercase()
 }

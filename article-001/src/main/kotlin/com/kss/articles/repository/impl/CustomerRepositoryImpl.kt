@@ -3,8 +3,8 @@ package com.kss.articles.repository.impl
 import com.kss.articles.domain.Address
 import com.kss.articles.domain.Customer
 import com.kss.articles.dto.CustomerDto
-import com.kss.articles.extension.isValid
 import com.kss.articles.extension.isEven
+import com.kss.articles.extension.isValid
 import com.kss.articles.extension.secondOrNull
 import com.kss.articles.mapper.toEntity
 import com.kss.articles.repository.CustomerRepository
@@ -15,15 +15,15 @@ import kotlin.random.Random
 @Service
 class CustomerRepositoryImpl(
     private val logger: Logger,
-): CustomerRepository {
+) : CustomerRepository {
     override fun saveCustomer(customerDto: CustomerDto): Customer {
         //map to entity
         val customer = customerDto.toEntity()
-        if(customer.isValid()) {
+        if (customer.isValid()) {
             //for testing purpose log and return
             logger.info("Customer $customer")
             return customer
-        }else{
+        } else {
             throw error("Invalid Email")
         }
     }
@@ -42,8 +42,8 @@ class CustomerRepositoryImpl(
 
     private fun generateCustomers(): List<Customer> {
         val customers = mutableListOf<Customer>()
-        for (i in 1..10){
-           customers.add(generateRandomCustomer())
+        for (i in 1..10) {
+            customers.add(generateRandomCustomer())
         }
         return customers
     }
