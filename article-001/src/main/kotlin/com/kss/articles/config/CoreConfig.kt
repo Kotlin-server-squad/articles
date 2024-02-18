@@ -14,6 +14,7 @@ class CoreConfig {
     fun logger(injectionPoint: InjectionPoint): Logger {
         return LoggerFactory.getLogger(
             injectionPoint.methodParameter?.containingClass // constructor
-                ?:injectionPoint.field?.declaringClass) // or field injection
+                ?: injectionPoint.field?.declaringClass
+        ) // or field injection
     }
 }
