@@ -1,0 +1,38 @@
+@startuml
+!pragma teoz true
+
+participant Main as "Main Thread"
+participant Scope as "CoroutineScope"
+participant ParentCoroutine as "Parent Coroutine\nlaunch"
+participant ChildCoroutine1 as "Child Coroutine 1\nlaunch"
+participant ChildCoroutine2 as "Child Coroutine 2\nlaunch"
+participant ChildCoroutine3 as "Child Coroutine 3\nlaunch"
+
+Main -> Scope : Launch ParentCoroutine
+activate Scope
+Scope -> ParentCoroutine : Starts
+activate ParentCoroutine
+
+ParentCoroutine -> ChildCoroutine1 : Launch
+activate ChildCoroutine1
+ChildCoroutine1 -> ChildCoroutine1 : Perform Task
+ChildCoroutine1 --> ParentCoroutine : Complete
+deactivate ChildCoroutine1
+
+ParentCoroutine -> ChildCoroutine2 : Launch
+activate ChildCoroutine2
+ChildCoroutine2 -> ChildCoroutine2 : Perform Task
+ChildCoroutine2 --> ParentCoroutine : Complete
+deactivate ChildCoroutine2
+
+ParentCoroutine -> ChildCoroutine3 : Launch
+activate ChildCoroutine3
+ChildCoroutine3 -> ChildCoroutine3 : Perform Task
+ChildCoroutine3 --> ParentCoroutine : Complete
+deactivate ChildCoroutine3
+
+ParentCoroutine --> Scope : Complete
+deactivate ParentCoroutine
+deactivate Scope
+
+@enduml

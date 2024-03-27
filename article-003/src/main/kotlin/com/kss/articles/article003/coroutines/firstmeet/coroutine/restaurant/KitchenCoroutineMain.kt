@@ -1,6 +1,6 @@
-package com.kss.articles.article003.coroutines.firstmeet.coroutine
+package com.kss.articles.article003.coroutines.firstmeet.coroutine.restaurant
 
-import com.kss.articles.article003.coroutines.firstmeet.coroutine.restaurant.KitchenCoroutineServiceImpl
+import com.kss.articles.article003.coroutines.firstmeet.coroutine.restaurant.service.KitchenCoroutineServiceImpl
 import com.kss.articles.article003.coroutines.firstmeet.domain.Order
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
