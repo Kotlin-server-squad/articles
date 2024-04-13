@@ -4,7 +4,6 @@ import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import service.NotificationService
-import util.log
 
 class BuilderLaunchSendNotifications {
 }
