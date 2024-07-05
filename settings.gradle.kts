@@ -3,6 +3,8 @@ plugins {
 }
 rootProject.name = "articles"
 
-include(":article-001")
-include(":article-002")
+include("article-001")
+include("article-002")
 include("article-007")
+include("article-008")
+include("utils")
