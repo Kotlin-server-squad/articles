@@ -6,11 +6,6 @@ plugins {
     id("io.spring.dependency-management")
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.21"
     kotlin("plugin.spring")
-    id("application")
-}
-
-application {
-    mainClass.set("com.kss.articles.article008.Article008ApplicationKt")
 }
 
 dependencies {
@@ -31,4 +26,5 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.12")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.testcontainers:postgresql:1.20.0")
 }
